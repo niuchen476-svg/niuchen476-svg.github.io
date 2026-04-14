@@ -1,36 +1,39 @@
-body, html {
-    margin: 0; padding: 0; width: 100%; height: 100%;
-    overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* 模拟《你的名字》黄昏渐变色 */
-    background: linear-gradient(180deg, #203a43, #2c5364, #ffafbd, #ffc3a0);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+/* 自定义动画：文字淡入 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.animate-fade-in {
+    animation: fadeIn 1.2s ease-out forwards;
 }
 
-.content {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; color: white; z-index: 10;
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
 }
 
-.anime-title { font-size: 3rem; text-shadow: 0 0 10px rgba(255,255,255,0.5); }
-
-.card-container { display: flex; gap: 20px; margin-top: 30px; }
-
-.card {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    padding: 20px 40px; border-radius: 15px;
-    cursor: pointer; transition: 0.3s;
+/* 多巴胺配色滚动条 */
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-.card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.3); }
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
 
-#canvas { position: fixed; top: 0; left: 0; pointer-events: none; }
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #22d3ee, #d946ef);
+    border-radius: 10px;
+}
+
+/* 新海诚风格渐变层增强 */
+section#contact {
+    background: radial-gradient(circle at bottom right, rgba(217, 70, 239, 0.1), transparent),
+                radial-gradient(circle at top left, rgba(34, 211, 238, 0.1), transparent);
+}
+
+/* 响应式调整：图片在鼠标悬停时的缩放时间 */
+.transition-duration-500 {
+    transition-duration: 500ms;
+}
