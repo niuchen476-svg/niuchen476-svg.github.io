@@ -14,7 +14,8 @@
   function applyTheme(theme) {
     root.dataset.theme = theme;
     localStorage.setItem('bd-theme', theme);
-    themeButton.querySelector('span').textContent = theme === 'dark' ? 'LIGHT' : 'DARK';
+    const themeLabel = themeButton.querySelector('span') || themeButton;
+    themeLabel.textContent = theme === 'dark' ? 'LIGHT' : 'DARK';
   }
 
   function applyLanguage(next) {
@@ -73,12 +74,14 @@
     clone.querySelectorAll('[contenteditable]').forEach((node) => node.setAttribute('contenteditable', 'false'));
     clone.querySelectorAll('.edit-tools').forEach((node) => node.classList.remove('visible'));
     try {
-      const [css, js] = await Promise.all([fetch('style.css').then((r) => r.text()), fetch('script.js').then((r) => r.text())]);
+      const stylesheet = document.querySelector('link[rel="stylesheet"]');
+      const sourceScript = document.querySelector('script[src]');
+      const [css, js] = await Promise.all([fetch(stylesheet.href).then((r) => r.text()), fetch(sourceScript.src).then((r) => r.text())]);
       clone.querySelector('link[rel="stylesheet"]').remove();
       const style = document.createElement('style');
       style.textContent = css;
       clone.querySelector('head').append(style);
-      clone.querySelector('script[src="script.js"]').remove();
+      clone.querySelector('script[src]').remove();
       const script = document.createElement('script');
       script.textContent = js;
       clone.querySelector('body').append(script);
