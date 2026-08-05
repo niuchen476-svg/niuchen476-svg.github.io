@@ -1,96 +1,178 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="zh-CN" data-theme="dark" data-edit-version="v1">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人综合空间 | Your Name</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="董卓然的个人作品集：设计、AI、交互产品与跨学科探索。">
+  <meta name="theme-color" content="#11110f">
+  <title>不董就问 · 董卓然</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-900 text-white font-sans">
+<body>
+  <div class="edit-hotzone" aria-hidden="true"></div>
+  <div class="edit-tools" aria-label="页面编辑工具">
+    <button class="edit-toggle" type="button">编辑</button>
+    <button class="export-button" type="button">导出 HTML</button>
+  </div>
 
-    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-purple-500/30">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">
-                PORTFOLIO
-            </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#" class="hover:text-cyan-400 transition-colors">首页</a>
-                <a href="#about" class="hover:text-pink-400 transition-colors">关于</a>
-                <a href="#work" class="hover:text-purple-400 transition-colors">作品</a>
-                <a href="#contact" class="hover:text-yellow-400 transition-colors">联系方式</a>
-            </div>
-            <div class="md:hidden text-2xl">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
+  <nav class="nav shell" aria-label="主导航">
+    <a class="wordmark" href="#top">
+      <strong>不董就问</strong><small>ASK · BUILD · LEARN</small>
+    </a>
+    <div class="nav-links">
+      <a href="#projects" data-i18n data-zh="作品" data-en="WORK">作品</a>
+      <a href="#about" data-i18n data-zh="关于" data-en="ABOUT">关于</a>
+      <a href="#contact" data-i18n data-zh="联系" data-en="CONTACT">联系</a>
+    </div>
+    <div class="nav-actions">
+      <button id="langToggle" class="mini-button" type="button" aria-label="切换语言">EN</button>
+      <button id="themeToggle" class="theme-button" type="button" aria-label="切换深浅主题"><i></i><span>LIGHT</span></button>
+    </div>
+  </nav>
 
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=2000" 
-             alt="Starry Night" 
-             class="absolute inset-0 w-full h-full object-cover opacity-60">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-slate-900"></div>
-        
-        <div class="relative z-10 text-center px-4">
-            <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tighter animate-fade-in">
-                你好，我是 <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-pink-400 to-yellow-300">YOUR NAME</span>
-            </h1>
-            <p class="text-lg md:text-2xl mb-8 text-slate-300">逐梦星空的创作者 / 动漫美学爱好者</p>
-            <a href="#work" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full font-bold text-lg hover:scale-105 transition-transform hover:shadow-[0_0_20px_rgba(34,211,238,0.6)]">
-                了解更多
-            </a>
+  <main>
+    <section class="hero shell" id="top">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="meta reveal" data-edit-id="hero-meta">ZHEJIANG UNIVERSITY · 2025 · HANGZHOU</p>
+        <h1 class="reveal delay-1" aria-label="不董就问">
+          <span data-edit-id="hero-title-1" data-i18n data-zh="不董" data-en="ASK.">不董</span>
+          <span class="outline" data-edit-id="hero-title-2" data-i18n data-zh="就问" data-en="BUILD.">就问</span>
+        </h1>
+        <p class="tagline reveal delay-2" data-edit-id="hero-tagline" data-i18n
+           data-zh="把好奇心变成可体验的作品，在设计、AI 与真实世界之间反复试作。"
+           data-en="Turning curiosity into tangible experiences through design, AI and hands-on experimentation.">
+          把好奇心变成可体验的作品，在设计、AI 与真实世界之间反复试作。
+        </p>
+        <div class="hero-actions reveal delay-2">
+          <a class="button primary" href="#projects"><span data-i18n data-zh="查看作品" data-en="VIEW PROJECTS">查看作品</span><b>↗</b></a>
+          <a class="button" href="resume-placeholder.txt" download><span data-i18n data-zh="下载简历" data-en="RÉSUMÉ">下载简历</span><b>↓</b></a>
         </div>
+      </div>
+      <figure class="portrait reveal delay-1">
+        <img src="assets/portrait-anime.jpg" alt="董卓然的动漫风格个人照片">
+        <figcaption><span>PORTRAIT / 2026</span><span>HANGZHOU</span></figcaption>
+        <div class="portrait-mark">INFJ<br>KEEP<br>GROUNDED</div>
+      </figure>
+      <p class="scroll-note">SCROLL TO EXPLORE ↓</p>
     </section>
 
-    <section id="work" class="py-24 max-w-7xl mx-auto px-6">
-        <h2 class="text-4xl font-bold mb-12 text-center">精选作品</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700 hover:border-pink-500 transition-all">
-                <img src="https://images.unsplash.com/photo-1578632292335-df3abbb0d586?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover group-hover:scale-110 transition-duration-500" alt="Work 1">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400">数字艺术探索</h3>
-                    <p class="text-slate-400 text-sm">结合星空色彩的视觉实验项目</p>
-                </div>
-            </div>
-            <div class="group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700 hover:border-cyan-500 transition-all">
-                <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover group-hover:scale-110 transition-duration-500" alt="Work 2">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-pink-400">品牌视觉设计</h3>
-                    <p class="text-slate-400 text-sm">为二次元品牌打造的独特标识</p>
-                </div>
-            </div>
-            <div class="group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700 hover:border-yellow-500 transition-all">
-                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover group-hover:scale-110 transition-duration-500" alt="Work 3">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-yellow-400">UI/UX 交互</h3>
-                    <p class="text-slate-400 text-sm">流畅且富有生命力的用户体验</p>
-                </div>
-            </div>
+    <section class="profile shell" id="about">
+      <p class="section-no">01 / PROFILE</p>
+      <div class="profile-main">
+        <p class="eyebrow" data-edit-id="profile-eyebrow" data-i18n data-zh="探索者，而不是标签" data-en="AN EXPLORER, NOT A LABEL">探索者，而不是标签</p>
+        <h2 data-edit-id="profile-title" data-i18n
+            data-zh="面向工业设计的跨学科创作者，也是一个仍在探索方向的独立开发者。"
+            data-en="A cross-disciplinary maker moving toward industrial design — and an independent developer still exploring what comes next.">
+          面向工业设计的跨学科创作者，也是一个仍在探索方向的独立开发者。
+        </h2>
+        <div class="bio-grid">
+          <p data-edit-id="profile-bio-1" data-i18n
+             data-zh="我是浙江大学 2025 级学生董卓然。兴趣驱动我从文化教育站点走到智能硬件原型，也让我持续接触新的模型与工具。"
+             data-en="I’m Zhuoran Dong, a 2025 undergraduate at Zhejiang University. Curiosity has taken me from cultural learning experiences to intelligent hardware prototypes and emerging AI tools.">
+            我是浙江大学 2025 级学生董卓然。兴趣驱动我从文化教育站点走到智能硬件原型，也让我持续接触新的模型与工具。
+          </p>
+          <p data-edit-id="profile-bio-2" data-i18n
+             data-zh="我关心大模型算法，也关心人如何驾驭 AI，而不是被工具牵着走。INFJ 是一种自我观察；“踏实做事”是我反复提醒自己的方法。"
+             data-en="I care about LLM algorithms and about how people can direct AI with intent. INFJ is a lens for reflection; staying grounded is the practice I keep returning to.">
+            我关心大模型算法，也关心人如何驾驭 AI，而不是被工具牵着走。INFJ 是一种自我观察；“踏实做事”是我反复提醒自己的方法。
+          </p>
         </div>
+      </div>
+      <aside class="focus-card">
+        <img src="assets/portrait-anime.jpg" alt="董卓然个人照片局部">
+        <p><small>CURRENT FOCUS</small><strong data-i18n data-zh="大模型算法与 AI 协作" data-en="LLM ALGORITHMS & AI COLLABORATION">大模型算法与 AI 协作</strong></p>
+      </aside>
     </section>
 
-    <section id="contact" class="py-24 bg-slate-950/50">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-8">联系我</h2>
-            <form class="space-y-6 text-left">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <input type="text" placeholder="你的姓名" class="w-full bg-slate-800 border border-slate-700 p-4 rounded-lg focus:outline-none focus:border-pink-500 transition-colors">
-                    <input type="email" placeholder="你的邮箱" class="w-full bg-slate-800 border border-slate-700 p-4 rounded-lg focus:outline-none focus:border-cyan-500 transition-colors">
-                </div>
-                <textarea rows="4" placeholder="说点什么吧..." class="w-full bg-slate-800 border border-slate-700 p-4 rounded-lg focus:outline-none focus:border-purple-500 transition-colors"></textarea>
-                <button class="w-full py-4 bg-white text-slate-900 font-bold rounded-lg hover:bg-cyan-400 hover:text-white transition-all transform hover:-translate-y-1">发送消息</button>
-            </form>
+    <section class="projects shell" id="projects">
+      <header class="section-header">
+        <p class="section-no">02 / SELECTED WORK</p>
+        <h2 data-edit-id="projects-title" data-i18n data-zh="把问题做成作品" data-en="TURN QUESTIONS INTO WORK">把问题做成作品</h2>
+        <p data-edit-id="projects-intro" data-i18n
+           data-zh="从文化教育、交互产品到智能硬件，项目是我理解技术边界的方式。"
+           data-en="From cultural education to interactive products and intelligent hardware, projects are how I learn the edge of technology.">
+          从文化教育、交互产品到智能硬件，项目是我理解技术边界的方式。
+        </p>
+      </header>
 
-            <div class="mt-16 flex justify-center space-x-8 text-2xl">
-                <a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors"><i class="fab fa-github"></i></a>
-                <a href="#" class="text-slate-400 hover:text-pink-400 transition-colors"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors"><i class="fab fa-twitter"></i></a>
-            </div>
-            <p class="mt-8 text-slate-500 text-sm">© 2026 YourName Design. Built with Stars & Dreams.</p>
+      <article class="project project-wide">
+        <figure class="project-image"><img src="assets/long-march-cover.jpg" alt="《重走长征路》项目封面"><figcaption>INTERACTIVE MUSEUM / AI REFLECTION</figcaption></figure>
+        <div class="project-info">
+          <p class="project-no">PROJECT 01</p>
+          <h3 data-edit-id="project-01-title" data-i18n data-zh="重走长征路" data-en="RETRACING THE LONG MARCH">重走长征路</h3>
+          <p class="lead" data-edit-id="project-01-summary" data-i18n
+             data-zh="一个将历史叙事、互动关卡与 AI 反思结合的博物馆教育体验。"
+             data-en="A museum learning experience combining historical narrative, interactive stages and AI reflection.">
+            一个将历史叙事、互动关卡与 AI 反思结合的博物馆教育体验。
+          </p>
+          <dl>
+            <div><dt data-i18n data-zh="角色" data-en="ROLE">角色</dt><dd data-edit-id="project-01-role" data-i18n data-zh="主要负责人，与两名 K12 少年协作开发" data-en="Project lead, developed with two K12 students">主要负责人，与两名 K12 少年协作开发</dd></div>
+            <div><dt data-i18n data-zh="方法" data-en="METHOD">方法</dt><dd>Frontend · Express · Supabase · AI workflow</dd></div>
+            <div><dt data-i18n data-zh="结果" data-en="OUTCOME">结果</dt><dd data-edit-id="project-01-result" data-i18n data-zh="校内短学期课程第一名 · 最佳团队奖" data-en="1st place · Best Team Award, university short-term course">校内短学期课程第一名 · 最佳团队奖</dd></div>
+          </dl>
+          <a class="text-link" href="https://niuchen476-svg.github.io/huozi-project/#/" target="_blank" rel="noreferrer"><span data-i18n data-zh="体验项目" data-en="OPEN PROJECT">体验项目</span> ↗</a>
         </div>
+      </article>
+
+      <article class="project project-reverse">
+        <div class="project-info">
+          <p class="project-no">PROJECT 02</p>
+          <h3 data-edit-id="project-02-title" data-i18n data-zh="墨脉 · 智能交互笔" data-en="INK-PULSE · SMART PEN">墨脉 · 智能交互笔</h3>
+          <p class="lead" data-edit-id="project-02-summary" data-i18n
+             data-zh="把小学时的发明构想，变成关于书写、反馈与自适应握姿的跨学科原型。"
+             data-en="An elementary-school invention revisited as a cross-disciplinary prototype about handwriting, feedback and adaptive grip.">
+            把小学时的发明构想，变成关于书写、反馈与自适应握姿的跨学科原型。
+          </p>
+          <dl>
+            <div><dt data-i18n data-zh="角色" data-en="ROLE">角色</dt><dd data-edit-id="project-02-role" data-i18n data-zh="独立开发 · 概念、建模、硬件与表达" data-en="Independent — concept, modeling, hardware and storytelling">独立开发 · 概念、建模、硬件与表达</dd></div>
+            <div><dt data-i18n data-zh="方法" data-en="METHOD">方法</dt><dd>SolidWorks · Arduino · C/C++ · AIGC</dd></div>
+            <div><dt data-i18n data-zh="探索" data-en="INQUIRY">探索</dt><dd data-edit-id="project-02-result" data-i18n data-zh="感知—决策—反馈闭环，算法赋能传统书写" data-en="A sensing–decision–feedback loop for augmented handwriting">感知—决策—反馈闭环，算法赋能传统书写</dd></div>
+          </dl>
+          <a class="text-link" href="https://github.com/niuchen476-svg/Smart-Electronic-Pen" target="_blank" rel="noreferrer"><span data-i18n data-zh="查看项目档案" data-en="READ CASE FILE">查看项目档案</span> ↗</a>
+        </div>
+        <figure class="project-image"><img src="assets/ink-pulse-product.png" alt="墨脉智能交互笔概念效果图" loading="lazy"><figcaption>INDUSTRIAL CONCEPT / INTERACTIVE HARDWARE</figcaption></figure>
+      </article>
+
+      <article class="project upcoming">
+        <div class="upcoming-art" aria-hidden="true"><span>03</span><b>▶</b></div>
+        <div class="project-info">
+          <p class="project-no">PROJECT 03 · INCOMING</p>
+          <h3 data-edit-id="project-03-title" data-i18n data-zh="下一支影像作品" data-en="THE NEXT VIDEO WORK">下一支影像作品</h3>
+          <p class="lead" data-edit-id="project-03-summary" data-i18n
+             data-zh="视频与项目说明待补充。这个位置已经为作品封面、播放入口和创作说明预留。"
+             data-en="Video and case notes coming soon. This space is reserved for the cover, playback and creative statement.">
+            视频与项目说明待补充。这个位置已经为作品封面、播放入口和创作说明预留。
+          </p>
+          <span class="text-link muted" data-i18n data-zh="等待素材上传" data-en="AWAITING UPLOAD">等待素材上传</span>
+        </div>
+      </article>
     </section>
 
+    <section class="practice shell">
+      <p class="section-no">03 / PRACTICE</p>
+      <div class="practice-title"><p class="eyebrow">HOW I WORK</p><h2 data-edit-id="practice-title" data-i18n data-zh="不懂，就问。\n问完，动手。" data-en="ASK FIRST.\nTHEN MAKE.">不懂，就问。<br>问完，动手。</h2></div>
+      <div class="practice-list">
+        <div><span>01</span><h3 data-edit-id="practice-01" data-i18n data-zh="把模糊兴趣变成问题" data-en="FRAME THE CURIOSITY">把模糊兴趣变成问题</h3><p data-edit-id="practice-01-desc" data-i18n data-zh="从真实场景和个人兴趣出发，先找值得验证的问题，再决定技术。" data-en="Start with a real context and a question worth testing before choosing the technology.">从真实场景和个人兴趣出发，先找值得验证的问题，再决定技术。</p><small>RESEARCH / PRODUCT</small></div>
+        <div><span>02</span><h3 data-edit-id="practice-02" data-i18n data-zh="与 AI 协作推进" data-en="DIRECT AI WITH INTENT">与 AI 协作推进</h3><p data-edit-id="practice-02-desc" data-i18n data-zh="把模型当作研究、表达和开发伙伴，通过反复验证探索能力边界。" data-en="Use models as research, expression and development partners — with deliberate iteration and verification.">把模型当作研究、表达和开发伙伴，通过反复验证探索能力边界。</p><small>LLM / AGENT / AIGC</small></div>
+        <div><span>03</span><h3 data-edit-id="practice-03" data-i18n data-zh="做出可被体验的版本" data-en="MAKE IT TANGIBLE">做出可被体验的版本</h3><p data-edit-id="practice-03-desc" data-i18n data-zh="从网页、互动叙事到硬件原型，让概念尽早进入真实体验。" data-en="Move ideas into real experience early, from web interactions and narrative systems to hardware prototypes.">从网页、互动叙事到硬件原型，让概念尽早进入真实体验。</p><small>FRONTEND / ARDUINO / CAD</small></div>
+      </div>
+    </section>
+
+    <section class="archive shell">
+      <div><p class="section-no">04 / OPEN ARCHIVE</p><h2 data-edit-id="archive-title" data-i18n data-zh="作品之外，持续记录" data-en="BEYOND PROJECTS, KEEP RECORDING">作品之外，持续记录</h2><p data-edit-id="archive-desc" data-i18n data-zh="GitHub 是正在生长的项目档案。这里也会逐步收纳学习笔记、视频、实验与过程资料。" data-en="GitHub is the living archive. Notes, videos, experiments and process material will gradually find a home here.">GitHub 是正在生长的项目档案。这里也会逐步收纳学习笔记、视频、实验与过程资料。</p></div>
+      <a href="https://github.com/niuchen476-svg?tab=repositories" target="_blank" rel="noreferrer">GITHUB ↗</a>
+    </section>
+
+    <section class="contact shell" id="contact">
+      <p class="section-no">05 / CONTACT</p>
+      <p class="eyebrow" data-i18n data-zh="保持好奇，也保持联系" data-en="STAY CURIOUS. STAY IN TOUCH.">保持好奇，也保持联系</p>
+      <h2 data-edit-id="contact-title" data-i18n data-zh="一起讨论一个\n尚未解决的问题。" data-en="LET'S TALK ABOUT\nAN UNSOLVED QUESTION.">一起讨论一个<br>尚未解决的问题。</h2>
+      <div class="contact-links"><a href="mailto:niuchen@gmail.com">niuchen@gmail.com ↗</a><a href="https://github.com/niuchen476-svg" target="_blank" rel="noreferrer">GitHub ↗</a><a href="resume-placeholder.txt" download><span data-i18n data-zh="下载简历" data-en="RÉSUMÉ">下载简历</span> ↓</a></div>
+    </section>
+  </main>
+
+  <footer class="footer shell"><div><strong>董卓然</strong><span>不董就问 / BUDONG</span></div><p>© 2026 · BUILT WITH CURIOSITY IN HANGZHOU</p><a href="#top">BACK TO TOP ↑</a></footer>
+  <script src="script.js"></script>
 </body>
 </html>

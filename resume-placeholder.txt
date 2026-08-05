@@ -1,0 +1,4 @@
+董卓然个人简历
+
+当前为占位文件。正式简历准备好后，请将 resume.pdf 放到仓库根目录，
+并把 index.html 中的 resume-placeholder.txt 替换为 resume.pdf。
