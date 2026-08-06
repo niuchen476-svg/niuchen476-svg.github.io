@@ -1,4 +1,5 @@
 (() => {
+  document.documentElement.classList.add('js');
   const root = document.documentElement;
   const langButton = document.querySelector('#langToggle');
   const themeButton = document.querySelector('#themeToggle');
@@ -100,6 +101,17 @@
   applyTheme(initialTheme);
   applyLanguage(language);
   restoreEdits();
+  const observed = document.querySelectorAll('main > section:not(.hero)');
+  observed.forEach((node) => node.classList.add('observe'));
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    }), { rootMargin: '0px 0px -10% 0px', threshold: .08 });
+    observed.forEach((node) => observer.observe(node));
+  } else observed.forEach((node) => node.classList.add('in-view'));
   themeButton.addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
   langButton.addEventListener('click', () => applyLanguage(language === 'zh' ? 'en' : 'zh'));
   editButton.addEventListener('click', () => setEditing(!editing));

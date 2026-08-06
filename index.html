@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN" data-theme="dark" data-edit-version="v1">
+<html lang="zh-CN" data-theme="dark" data-edit-version="v2">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
   <div class="edit-hotzone" aria-hidden="true"></div>
   <div class="edit-tools" aria-label="页面编辑工具">
     <button class="edit-toggle" type="button">编辑</button>
@@ -31,7 +32,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main">
     <section class="hero shell" id="top">
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-copy">
@@ -67,23 +68,33 @@
             data-en="A cross-disciplinary maker moving toward industrial design — and an independent developer still exploring what comes next.">
           面向工业设计的跨学科创作者，也是一个仍在探索方向的独立开发者。
         </h2>
-        <div class="bio-grid">
+        <div class="bio-story">
           <p data-edit-id="profile-bio-1" data-i18n
-             data-zh="我是浙江大学 2025 级学生董卓然。兴趣驱动我从文化教育站点走到智能硬件原型，也让我持续接触新的模型与工具。"
-             data-en="I’m Zhuoran Dong, a 2025 undergraduate at Zhejiang University. Curiosity has taken me from cultural learning experiences to intelligent hardware prototypes and emerging AI tools.">
-            我是浙江大学 2025 级学生董卓然。兴趣驱动我从文化教育站点走到智能硬件原型，也让我持续接触新的模型与工具。
+             data-zh="我是浙江大学 2025 级学生董卓然，也叫「不董就问」。兴趣驱动我从 <a href='#projects'>文化教育体验</a> 走到 <a href='#projects'>智能硬件原型</a>，再进入 <a href='lab/'>人工智能实验</a>。"
+             data-en="I’m Zhuoran Dong, a 2025 undergraduate at Zhejiang University — also known as BUDONG. Curiosity has taken me from <a href='#projects'>cultural learning experiences</a> to <a href='#projects'>intelligent hardware</a>, and into the <a href='lab/'>AI lab</a>.">
+            我是浙江大学 2025 级学生董卓然，也叫「不董就问」。兴趣驱动我从 <a href="#projects">文化教育体验</a> 走到 <a href="#projects">智能硬件原型</a>，再进入 <a href="lab/">人工智能实验</a>。
           </p>
           <p data-edit-id="profile-bio-2" data-i18n
-             data-zh="我关心大模型算法，也关心人如何驾驭 AI，而不是被工具牵着走。INFJ 是一种自我观察；“踏实做事”是我反复提醒自己的方法。"
-             data-en="I care about LLM algorithms and about how people can direct AI with intent. INFJ is a lens for reflection; staying grounded is the practice I keep returning to.">
-            我关心大模型算法，也关心人如何驾驭 AI，而不是被工具牵着走。INFJ 是一种自我观察；“踏实做事”是我反复提醒自己的方法。
+             data-zh="我还不能说自己已经掌握了这些技术，但已经在课程与 AI 指导下走过完整流程，并把过程保存在 <a href='lab/'>实验室</a>。我关心大模型算法，也关心人如何驾驭 AI，而不是被工具牵着走。"
+             data-en="I can’t claim mastery yet, but I have completed full workflows with course and AI guidance and preserved the process in my <a href='lab/'>lab</a>. I care about LLM algorithms — and about directing AI rather than being directed by tools.">
+            我还不能说自己已经掌握了这些技术，但已经在课程与 AI 指导下走过完整流程，并把过程保存在 <a href="lab/">实验室</a>。我关心大模型算法，也关心人如何驾驭 AI，而不是被工具牵着走。
           </p>
+          <p data-edit-id="profile-bio-3" data-i18n data-zh="INFJ 是一种自我观察；「踏实做事」是我反复提醒自己的方法。项目之外，我会在 <a href='notes/'>不董笔记</a> 继续记录课程、复盘和还没想明白的问题。" data-en="INFJ is a lens for reflection; staying grounded is the practice I keep returning to. Beyond projects, <a href='notes/'>BUDONG Notes</a> will hold course notes, retrospectives, and questions I haven’t figured out yet.">INFJ 是一种自我观察；「踏实做事」是我反复提醒自己的方法。项目之外，我会在 <a href="notes/">不董笔记</a> 继续记录课程、复盘和还没想明白的问题。</p>
         </div>
       </div>
       <aside class="focus-card">
         <img src="assets/portrait-anime.jpg" alt="董卓然个人照片局部">
         <p><small>CURRENT FOCUS</small><strong data-i18n data-zh="大模型算法与 AI 协作" data-en="LLM ALGORITHMS & AI COLLABORATION">大模型算法与 AI 协作</strong></p>
       </aside>
+    </section>
+
+    <section class="now shell" aria-label="最近状态">
+      <p class="section-no">NOW / AUG 2026</p>
+      <div class="now-list">
+        <a href="lab/"><small data-i18n data-zh="正在学习" data-en="LEARNING">正在学习</small><strong data-i18n data-zh="重新理解 AI 课程实验" data-en="RELEARNING MY AI LABS">重新理解 AI 课程实验</strong><span>↗</span></a>
+        <a href="notes/"><small data-i18n data-zh="正在整理" data-en="WRITING">正在整理</small><strong data-i18n data-zh="课程资料与个人感悟" data-en="COURSE NOTES & REFLECTIONS">课程资料与个人感悟</strong><span>↗</span></a>
+        <a href="projects/"><small data-i18n data-zh="持续制作" data-en="MAKING">持续制作</small><strong data-i18n data-zh="项目档案与作品故事" data-en="PROJECT FILES & STORIES">项目档案与作品故事</strong><span>↗</span></a>
+      </div>
     </section>
 
     <section class="projects shell" id="projects">
@@ -159,7 +170,7 @@
       <div class="room-grid">
         <a class="room-card room-projects" href="projects/"><span>01</span><small>PROJECTS</small><h3 data-i18n data-zh="作品间" data-en="PROJECT ROOM">作品间</h3><p data-i18n data-zh="完整项目、角色、过程与成果。" data-en="Full cases, roles, process and outcomes.">完整项目、角色、过程与成果。</p><b>ENTER ↗</b></a>
         <a class="room-card room-lab" href="lab/"><span>02</span><small>AI LAB</small><h3 data-i18n data-zh="实验室" data-en="AI LAB">实验室</h3><p data-i18n data-zh="课程实验、AI 辅助学习与重新理解。" data-en="Course experiments, AI-assisted learning and relearning.">课程实验、AI 辅助学习与重新理解。</p><b>ENTER ↗</b></a>
-        <a class="room-card room-notes" href="notes/"><span>03</span><small>NOTES</small><h3 data-i18n data-zh="不董笔记" data-en="BUDONG NOTES">不董笔记</h3><p data-i18n data-zh="课程资料、项目复盘与个人感悟。" data-en="Course notes, project reflections and personal thoughts.">课程资料、项目复盘与个人感悟。</p><b>ENTER ↗</b></a>
+        <a class="room-card room-notes" href="notes/"><span>03</span><small>NOTES · FIREFLY READY</small><h3 data-i18n data-zh="不董笔记" data-en="BUDONG NOTES">不董笔记</h3><p data-i18n data-zh="课程资料、项目复盘与个人感悟；这里将逐步接入 Firefly 文章系统。" data-en="Course notes, project reflections and personal thoughts — gradually growing into a Firefly-powered journal.">课程资料、项目复盘与个人感悟；这里将逐步接入 Firefly 文章系统。</p><b>ENTER ↗</b></a>
         <a class="room-card room-life" href="life/"><span>04</span><small>OFF THE SCREEN</small><h3 data-i18n data-zh="生活区" data-en="OFF THE SCREEN">生活区</h3><p data-i18n data-zh="运动、球星、照片与真实日常。" data-en="Sports, athletes, photographs and everyday life.">运动、球星、照片与真实日常。</p><b>ENTER ↗</b></a>
       </div>
     </section>
@@ -176,7 +187,7 @@
 
     <section class="archive shell">
       <div><p class="section-no">05 / OPEN ARCHIVE</p><h2 data-edit-id="archive-title" data-i18n data-zh="作品之外，持续记录" data-en="BEYOND PROJECTS, KEEP RECORDING">作品之外，持续记录</h2><p data-edit-id="archive-desc" data-i18n data-zh="GitHub 是正在生长的项目档案。这里也会逐步收纳学习笔记、视频、实验与过程资料。" data-en="GitHub is the living archive. Notes, videos, experiments and process material will gradually find a home here.">GitHub 是正在生长的项目档案。这里也会逐步收纳学习笔记、视频、实验与过程资料。</p></div>
-      <a href="https://github.com/niuchen476-svg?tab=repositories" target="_blank" rel="noreferrer">GITHUB ↗</a>
+      <div class="archive-links"><a href="notes/"><span data-i18n data-zh="打开笔记" data-en="OPEN NOTES">打开笔记</span> ↗</a><a href="https://github.com/niuchen476-svg?tab=repositories" target="_blank" rel="noreferrer">GITHUB ↗</a></div>
     </section>
 
     <section class="contact shell" id="contact">
